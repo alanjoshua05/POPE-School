@@ -1,0 +1,45 @@
+body {
+  background: #000;
+  margin: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .lg-react-element {
+    column-count: 1;
+    column-gap: 8px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .lg-react-element {
+    column-count: 2;
+    column-gap: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lg-react-element {
+    column-count: 3;
+    column-gap: 8px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lg-react-element {
+    column-count: 4;
+    column-gap: 8px;
+  }
+}
+
+#galpic {
+  max-width: 100%;
+  display: block;
+  padding: 5px 0px;
+  border-radius: 0px;
+  transition: transform 0.2s;
+}
+
+#galpic:hover {
+  filter: opacity(0.9);
+  transform: scale(1.01);
+}

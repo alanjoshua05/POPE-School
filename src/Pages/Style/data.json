@@ -1,0 +1,417 @@
+[
+  {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "6o9xounuzfgq"
+        }
+      },
+      "id": "4oClWQFtZEWaLbApcQCvE7",
+      "type": "Entry",
+      "createdAt": "2024-10-14T02:17:16.781Z",
+      "updatedAt": "2024-10-14T02:17:16.781Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "staffs"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "pgStaffs": "1. Mrs.A. Hemalarani Diraviaselvi, M.Sc., B.Ed., (Zoology)\n2. ⁠Mrs. D. Leethiyal Packiyavathi, M.Sc., M.Ed., M.Phil., (Botany)\n3. ⁠Mr. J. Benjamine, B.B.A., M.P.Ed., M.Phil., PGDSM., CNIS (Physical Director)\n4. ⁠Dr.Mrs.R. Omegala Priakumari, M.Sc., M.Ed., M.Phil., Ph.D., (Physics)\n5. Mrs.A. Jesie Giruba, M.Sc., M.Ed., (Chemistry)\n6. Mrs.M. Selvi, M.A.(H), M.A.(T), B.Ed., (History)\n7. Mrs.J. Gladys Jebakumari, M.Sc., B.Ed., (Maths)\n8. Mr.B. Dencis, M.A., B.Ed., (Economics)\n9. Mrs.Juliet Jebamalar, M.A., B.Ed., (English)",
+      "btStaffs": "1. Mrs.G. Gnana Vijaya, B.Sc., B.Ed., (Maths)\n2. Mrs.D. Janatha B.Sc. B.Ed., (Science)\n3. Mr.V. Biju Samuel, M.A., B.Ed., (Tamil)\n4. Mrs.S. Precila, B.Sc., B.Ed., (Maths)\n5. Mrs.T. Chandra, M.A., B.Ed., (History)\n6. Mrs.M. Esther Rani Mary, B.Sc., M.Ed., (Maths)\n7. Mrs.J. Agnes Mabel Jeyakumari, B.A., B.Ed., (History)\n8. Mr.M. Paulraj, M.A., B.Ed., M.Phil., (NET)., (Tamil)\n9. Mrs.R. Jeyakumari, B.Sc., B.Ed., (Science)\n10. Mr.S. Gershome Livingston, M.Sc., B.Ed., (Science)\n11. ⁠Mr.R. Paul Prabhu Sam, M.A., B.Ed., M.Phil., (English)\n12. Mr.K. Pethuru D.T.Ed., B.Lit., M.A., M.Ed., (Tamil)\n13. Mrs. A. Abitha Sherine, M.Sc., B.Ed., M.Phil., M.C.A., (Maths)",
+      "secondaryGrade": "1. Mrs.K. Mary Indra, M.A., B.Ed., M.Phil\n2. Mr.P. Ponkumar Anantharaj, B.Lit., M.A., B.Ed.,\n3. Mr.P. Solomon Jebakumar, B.Lit., M.A., B.Ed.,\n4. Mrs.J.P. Sunantha Sucila, B.Lit., M.A., B.Ed.,\n5. Mrs.G. Geetha Packiavathy, B.Lit., M.A.,\n6. Mr.J. Edwin Devadhass, B.A., B.P.Ed., PGDYM (Phy. Edn. Tr)\n7. Mr.M. Yesa Jeyakumar, T.T.C (Drawing Master)",
+      "nonTeachingStaffs": "1. Mr.I. Jeyakumar, (Junior Asst.)\n2. Mr.P. James Augustine, (Lab Asst.)\n3. Mr.J. Balasekar, (Record Clerk)\n4. Mr.F. Johnson Gnanaraja Joshua, (Lib. Rec. Clerk)\n5. Mr.G Jacob Samuel, (Office Asst.)\n6. Mr.P. Bravin Jose, (Watchman)\n7. Mr. M. Packiaraj Jebaseelan, (Waterman)\n",
+      "managmentStaffs": "1. Mr. T. Devaraj Samuel, M.A., B.Ed., PGDCA (Computer Science)\n2. Selvi. K. Murugalakshmi, M.Com., B.Ed., (Commerce)\n3. Mr.E. Joseph Hans Durairaj, D.T.Tech., P.GD.C.A.,\n4. Mr.S. Jasper Arulsingh, DME, ССР.\n5. Mr.J. Ananth,\n6. ⁠Mr. N. Velsamy, (Sweeper)\n7. Mrs. K. Selvi, (Sweeper)",
+      "heads": "- Mr. C. Jeyaratchakar (CORRESPONDENT)\n- Mr.C. Edward Johnson Paul, M.Sc., M.Ed., M.Phil., Μ.Α. (Τ), Μ.Α.(Η), Μ.Α.(S), Μ.Α.(Ρ), (HEADMASTER)\n- Mrs. R. Hepsiba Beula, M.A., B.Ed., M.Phil., (Tamil) (P.G.)(ASST.HEADMASTER)\n- Mr. T. Jeyamani, M.A., B.Ed., (Tamil) (B.T.) (ASST.HEADMASTER)\n- Mrs. A. Margaret, M.A., B.Ed., M.Phil., (Sec. Grade) (ASST.HEADMASTER)"
+    }
+  },
+  {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "6o9xounuzfgq"
+        }
+      },
+      "id": "3h20zmY9PFEdEzfjnITvkG",
+      "type": "Entry",
+      "createdAt": "2024-10-13T18:52:32.454Z",
+      "updatedAt": "2024-10-13T18:52:32.454Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "achievements"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "image": {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "6o9xounuzfgq"
+            }
+          },
+          "id": "6sjPxGhDNMHaVfu0PL3KvI",
+          "type": "Asset",
+          "createdAt": "2024-10-13T18:50:16.683Z",
+          "updatedAt": "2024-10-13T18:50:16.683Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "National Team",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/6o9xounuzfgq/6sjPxGhDNMHaVfu0PL3KvI/5ad653a78681fd2d2632357fe222f23a/RS_64770.JPG",
+            "details": {
+              "size": 9273695,
+              "image": {
+                "width": 6000,
+                "height": 4000
+              }
+            },
+            "fileName": "RS_64770.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      "achievement": "1st Prize in National football competition.",
+      "description": "The team secured the prestigious first place in a national football competition, showcasing exceptional talent and teamwork, outclassing competitors from across the country to claim this significant victory."
+    }
+  },
+  {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "6o9xounuzfgq"
+        }
+      },
+      "id": "4Q59Zh7OrtsGyXquy22yEt",
+      "type": "Entry",
+      "createdAt": "2024-10-13T18:48:31.167Z",
+      "updatedAt": "2024-10-13T18:48:31.167Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "highlights"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "image": {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "6o9xounuzfgq"
+            }
+          },
+          "id": "1DDTLBo3AM2URN0dBF58oQ",
+          "type": "Asset",
+          "createdAt": "2024-10-13T18:45:24.895Z",
+          "updatedAt": "2024-10-13T18:45:24.895Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Chapel",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/6o9xounuzfgq/1DDTLBo3AM2URN0dBF58oQ/b2a58673a60febfb8c0cbb15a4b721af/RS_64615.JPG",
+            "details": {
+              "size": 5545180,
+              "image": {
+                "width": 6000,
+                "height": 4000
+              }
+            },
+            "fileName": "RS_64615.JPG",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      "title": "Chapel Day",
+      "description": "We have celebrated 20th chapel day in our school today (06/10/2024), with our beloved Rev. Manohar."
+    }
+  },
+  {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "6o9xounuzfgq"
+        }
+      },
+      "id": "QeRpelLbOA54BLB6hzHub",
+      "type": "Entry",
+      "createdAt": "2024-10-13T18:42:31.653Z",
+      "updatedAt": "2024-10-13T18:42:31.653Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "activities"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "image": {
+        "metadata": {
+          "tags": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "6o9xounuzfgq"
+            }
+          },
+          "id": "6UeSILyaSSEK8oObTNzWLJ",
+          "type": "Asset",
+          "createdAt": "2024-10-13T18:38:17.263Z",
+          "updatedAt": "2024-10-13T18:38:17.263Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Image",
+          "description": "",
+          "file": {
+            "url": "//images.ctfassets.net/6o9xounuzfgq/6UeSILyaSSEK8oObTNzWLJ/7e917755d91d37c0077f2b39bd18f856/IMG_20240720_161746_1.jpg",
+            "details": {
+              "size": 5183677,
+              "image": {
+                "width": 4000,
+                "height": 1844
+              }
+            },
+            "fileName": "IMG_20240720_161746_1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      "activity": "Silambam",
+      "description": "We provide Silambam class in our school, many students from our school have participated in District and National competition and won many prizes.",
+      "master": "Jacob Jebaraj"
+    }
+  },
+  {
+    "metadata": {
+      "tags": [],
+      "concepts": []
+    },
+    "sys": {
+      "space": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Space",
+          "id": "6o9xounuzfgq"
+        }
+      },
+      "id": "pyp65Kd4nDLWV3P9eIHuH",
+      "type": "Entry",
+      "createdAt": "2024-10-13T18:38:36.711Z",
+      "updatedAt": "2024-10-13T18:38:36.711Z",
+      "environment": {
+        "sys": {
+          "id": "master",
+          "type": "Link",
+          "linkType": "Environment"
+        }
+      },
+      "revision": 1,
+      "contentType": {
+        "sys": {
+          "type": "Link",
+          "linkType": "ContentType",
+          "id": "gallery"
+        }
+      },
+      "locale": "en-US"
+    },
+    "fields": {
+      "images": [
+        {
+          "metadata": {
+            "tags": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "6o9xounuzfgq"
+              }
+            },
+            "id": "je65Stc1WcyjhSeM2qKWG",
+            "type": "Asset",
+            "createdAt": "2024-10-12T17:12:42.316Z",
+            "updatedAt": "2024-10-12T17:12:42.316Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-US"
+          },
+          "fields": {
+            "title": "Image 1",
+            "description": "",
+            "file": {
+              "url": "//images.ctfassets.net/6o9xounuzfgq/je65Stc1WcyjhSeM2qKWG/6fa33a2dfb08eb67f544e99a696d05c8/RS_64606.JPG",
+              "details": {
+                "size": 13525351,
+                "image": {
+                  "width": 6000,
+                  "height": 4000
+                }
+              },
+              "fileName": "RS_64606.JPG",
+              "contentType": "image/jpeg"
+            }
+          }
+        },
+        {
+          "metadata": {
+            "tags": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "6o9xounuzfgq"
+              }
+            },
+            "id": "6UeSILyaSSEK8oObTNzWLJ",
+            "type": "Asset",
+            "createdAt": "2024-10-13T18:38:17.263Z",
+            "updatedAt": "2024-10-13T18:38:17.263Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-US"
+          },
+          "fields": {
+            "title": "Image",
+            "description": "",
+            "file": {
+              "url": "//images.ctfassets.net/6o9xounuzfgq/6UeSILyaSSEK8oObTNzWLJ/7e917755d91d37c0077f2b39bd18f856/IMG_20240720_161746_1.jpg",
+              "details": {
+                "size": 5183677,
+                "image": {
+                  "width": 4000,
+                  "height": 1844
+                }
+              },
+              "fileName": "IMG_20240720_161746_1.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
