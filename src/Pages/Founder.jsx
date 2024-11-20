@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import pope from "./Images/pope.avif"
 
 export default function Founder() {
   return (
@@ -12,7 +13,7 @@ export default function Founder() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -22,13 +23,14 @@ function Image() {
         >
           <Box
             component="img"
-            src="https://images.hindustantimes.com/tamil/img/2023/04/23/400x225/George_Uglow_Pope_1682277273616_1682277281476.jpg"
+            src={pope}
             sx={{
               width: "100%",
-              height: "100vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
         </Box>

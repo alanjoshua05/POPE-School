@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import hero2 from "../Pages/Images/hero2.jpg"
+import uniform from "../Pages/Images/uniform.jpg"
 export default function Rules() {
   return (
     <div>
@@ -14,7 +15,7 @@ export default function Rules() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -27,10 +28,11 @@ function Image() {
             src={hero2}
             sx={{
               width: "100%",
-              height: "100vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -41,7 +43,7 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
+              borderRadius: "20px",
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel
@@ -129,10 +131,11 @@ function Dress() {
           </Typography>
           <hr className="my-3" />
           <div className="grid mt-12 lg:grid-cols-2 gap-12">
-            <div>
+            <div className="flex justify-center">
               <img
-                src="https://t4.ftcdn.net/jpg/07/47/52/65/360_F_747526593_zVsSkbEg7Sv46roUeEuMSUD9nPNxCT2B.jpg"
+                src={uniform}
                 alt=""
+                style={{width:"50%"}}
               />
             </div>
             <div className="flex">
@@ -140,7 +143,7 @@ function Dress() {
                 <p>
                   At our boys' school, we uphold a strong dress code that promotes
                   discipline, unity, and pride. Students are required to wear a
-                  crisp white shirt paired with tailored navy blue trousers. A
+                  crisp white shirt paired with tailored brown pant. A
                   school tie must be worn, reflecting our identity and values.
                   Footwear consists of polished black shoes, ensuring a neat
                   appearance. The dress code encourages students to present

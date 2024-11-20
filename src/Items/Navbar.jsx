@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Grid,
   Box,
   IconButton,
   Typography,
@@ -11,13 +10,9 @@ import {
   List,
   ListItem,
   ListItemText,
-  Menu,
-  MenuItem,
-  Fade,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "./logo.jpg";
 import {
   Dropdown,
@@ -26,6 +21,7 @@ import {
   DropdownItem,
   Button,
 } from "@nextui-org/react";
+
 export default function Navbar() {
   return (
     <div>
@@ -36,13 +32,9 @@ export default function Navbar() {
 
 function Nav() {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
   const handleDrawerOpen = () => setOpenDrawer(true);
   const handleDrawerClose = () => setOpenDrawer(false);
-  const handleClick = (event) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
+  const Navigate = useNavigate();
 
   return (
     <AppBar
@@ -54,7 +46,8 @@ function Nav() {
     >
       <Toolbar>
         <Box sx={{ flexGrow: 1 }} className="flex gap-2">
-          <img style={{ width: "65px" }} src={logo} alt="logo" />
+          <Link to="/">
+          <img style={{ width: "65px" }} src={logo} alt="logo" /></Link>
           <Typography
             variant="h4"
             color="black"
@@ -76,16 +69,21 @@ function Nav() {
             className="flex gap-1"
           >
             <li className="text-black hover-underline cursor-pointer">
-              <Button variant="light">
-                <Link to="/">
-                  <Typography variant="body1" color="initial">
-                    Home
-                  </Typography>
-                </Link>
+              <Button onClick={() => Navigate("/")} variant="light">
+                <Typography variant="body1" color="initial">
+                  Home
+                </Typography>
+              </Button>
+            </li>
+            <li className="text-black hover-underline cursor-pointer">
+              <Button onClick={() => Navigate("/diocese")} variant="light">
+                <Typography variant="body1" color="initial">
+                Diocese
+                </Typography>
               </Button>
             </li>
             <li>
-              <Dropdown backdrop="blur">
+              <Dropdown backdrop="">
                 <DropdownTrigger>
                   <Button variant="light">
                     <Typography variant="body1" color="initial">
@@ -118,19 +116,15 @@ function Nav() {
                 </DropdownMenu>
               </Dropdown>
             </li>
-
-            <Link to="/achievement">
-              <li className="text-black hover-underline cursor-pointer">
-                <Button variant="light">
-                  <Typography variant="body1" color="initial">
-                    Achievements
-                  </Typography>
-                </Button>
-              </li>
-            </Link>
-
+            <li className="text-black hover-underline cursor-pointer">
+              <Button onClick={() => Navigate("/achievement")} variant="light">
+                <Typography variant="body1" color="initial">
+                  Achievements
+                </Typography>
+              </Button>
+            </li>
             <li>
-              <Dropdown backdrop="blur">
+              <Dropdown backdrop="">
                 <DropdownTrigger>
                   <Button variant="light">
                     <Typography variant="body1" color="initial">
@@ -157,7 +151,7 @@ function Nav() {
               </Dropdown>
             </li>
             <li>
-              <Dropdown backdrop="blur">
+              <Dropdown backdrop="">
                 <DropdownTrigger>
                   <Button variant="light">
                     <Typography variant="body1" color="initial">
@@ -190,26 +184,24 @@ function Nav() {
                 </DropdownMenu>
               </Dropdown>
             </li>
-            <Link to="/contact">
-              <li className="text-black hover-underline cursor-pointer">
-                <Button variant="light">
-                  <Link to="/staff">
-                    <Typography variant="body1" color="initial">
-                      Staffs
-                    </Typography>
-                  </Link>
-                </Button>
-              </li>
-            </Link>
-            <Link to="/contact">
-              <li className="text-black hover-underline cursor-pointer">
-                <Button variant="light">
+
+            <li className="text-black hover-underline cursor-pointer">
+              <Button variant="light">
+                <Link to="/staff">
                   <Typography variant="body1" color="initial">
-                    Contact Us
+                    Staffs
                   </Typography>
-                </Button>
-              </li>
-            </Link>
+                </Link>
+              </Button>
+            </li>
+
+            <li className="text-black hover-underline cursor-pointer">
+              <Button onClick={() => Navigate("/contact")} variant="light">
+                <Typography variant="body1" color="initial">
+                  Contact Us
+                </Typography>
+              </Button>
+            </li>
           </ul>
         </Stack>
 
@@ -225,8 +217,13 @@ function Nav() {
         <Drawer anchor="right" open={openDrawer} onClose={handleDrawerClose}>
           <List>
             <ListItem button onClick={handleDrawerClose}>
-              <Link to="/home">
+              <Link to="/">
                 <ListItemText primary="Home" />
+              </Link>
+            </ListItem>
+            <ListItem button onClick={handleDrawerClose}>
+              <Link to="/diocese">
+                <ListItemText primary="Diocese" />
               </Link>
             </ListItem>
             <ListItem button onClick={handleDrawerClose}>

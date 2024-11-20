@@ -32,7 +32,9 @@ import img11 from "../Pages/Images/RS_64688.jpg"
 import img12 from "../Pages/Images/RS_64695.jpg"
 import img13 from "../Pages/Images/RS_64726.jpg"
 import img14 from "../Pages/Images/trashed-1723203082-IMG_20240710_154448.jpg"
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 // Proper import for local images
 
 export default function Gallery() {
@@ -47,7 +49,7 @@ export default function Gallery() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -60,10 +62,11 @@ function Image() {
             src={hero2} // Corrected image reference
             sx={{
               width: "100%",
-              height: "92vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -74,7 +77,7 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
+              borderRadius: "20px",
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel
@@ -233,13 +236,13 @@ function GalleryComponent() {
           plugins={[lgThumbnail, lgZoom, lgAutoplay]}
         >
           {images.map((image, index) => (
-            <a href={image.src} key={index}>
+            <a data-aos="fade-up" href={image.src} key={index}>
               <img id="galpic" alt={`Image ${index + 1}`} src={image.src} />
             </a>
           ))}
           {galleryItems.map((item) => {
             return item.fields.images.map((image) => (
-              <a href={`https:${image.fields.file.url}`} key={image.sys.id}>
+              <a data-aos="fade-up" href={`https:${image.fields.file.url}`} key={image.sys.id}>
                 <img
                   id="galpic"
                   alt={image.fields.title}

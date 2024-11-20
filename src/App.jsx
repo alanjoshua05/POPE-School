@@ -14,6 +14,7 @@ import Family from "./Pages/Family";
 import Founder from "./Pages/Founder";
 import Vision from "./Pages/Vision";
 import Rules from "./Pages/Rules";
+import Members from "./Pages/Diocice";
 
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/founder" element={<Founder />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/rules" element={<Rules />} />
+          <Route path="/diocese" element={<Members />} />
         </Routes>
         <Footer/>
       </BrowserRouter>

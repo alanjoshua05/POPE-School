@@ -3,18 +3,22 @@ import React from "react";
 import "../Pages/Style/home.css";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { createClient } from "contentful";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import hero from "../Pages/Images/hero.jpg"
-import hero1 from "../Pages/Images/slide1.jpg"
-import hero2 from "../Pages/Images/hero2.jpg"
-import slide2 from "../Pages/Images/slide2.jpg"
-import slide3 from "../Pages/Images/slide3.jpg"
-import slide4 from "../Pages/Images/slide4.jpg"
-import slide5 from "../Pages/Images/slide5.jpg"
+import 'swiper/swiper-bundle.css';
+import hero from "../Pages/Images/hero.jpg";
+import hero1 from "../Pages/Images/slide1.jpg";
+import hero2 from "../Pages/Images/hero2.jpg";
+import slide2 from "../Pages/Images/slide2.jpg";
+import slide3 from "../Pages/Images/slide3.jpg";
+import slide4 from "../Pages/Images/slide4.jpg";
+import slide5 from "../Pages/Images/slide5.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default function Home() {
   return (
     <div>
@@ -34,16 +38,17 @@ function About_school() {
         {/* Added container prop */}
         <Grid item xs={12} md={6} sm={12} lg={6}>
           {/* Added xs for smaller screens */}
-          <Box mt={10}>
+          <Box mt={10} data-aos="zoom-in-right">
             <Typography
               sx={{
                 lineHeight: { lg: "60px", md: "55px", sm: "50px", xs: "40px" },
                 color: "black",
-                fontSize: { lg: "60px", md: "45px", sm: "40px", xs: "35px" }, // Adjust for more breakpoints
+                fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "35px" }, // Adjust for more breakpoints
               }}
               id="pope"
+              className="uppercase"
             >
-              POPE Hr. Sec <br /> School
+              POPE MEMORIAL <br /> Hr. Sec School
             </Typography>
             <Typography
               mt={1}
@@ -63,7 +68,11 @@ function About_school() {
         <Grid item xs={12} md={6} sm={12} lg={6}>
           {" "}
           {/* Added xs for responsiveness */}
-          <Box mt={{ lg: 0, sm: 5, xs: 5 }}>
+          <Box
+            data-aos="zoom-in-left"
+            data-aos-delay="300"
+            mt={{ lg: 0, sm: 5, xs: 5 }}
+          >
             <img
               src={hero}
               alt="Happy African American student raising hand"
@@ -136,6 +145,8 @@ function Highlight() {
               <article
                 key={item.sys.id}
                 className="flex max-w-xl flex-col items-start justify-between border p-1 rounded-xl"
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
               >
                 <CardMedia
                   sx={{ marginTop: "0px" }}
@@ -162,8 +173,30 @@ function Highlight() {
 }
 
 const Carousel = () => {
+  const [data, setData] = useState([]);
+  const client = createClient({
+    space: "6o9xounuzfgq",
+    accessToken: "K4LSSTkZuhH9AFp8KY3suuAk4b3WFH8bTgb5E1N6aOQ",
+  });
+
+  useEffect(() => {
+    const getEntry = async () => {
+      try {
+        const entry = await client.getEntries();
+        console.log(entry);
+        setData(entry.items); // Set the items directly
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getEntry();
+  }, []);
+
+  // Filter to get only the "home" content type
+  const home = data.filter((item) => item.sys.contentType.sys.id === "home");
+
   return (
-    <Box position="relative" width="100%" margin="auto">
+    <Box p={2} position="relative" width="100%" margin="auto">
       <Box
         display="flex"
         justifyContent="center"
@@ -174,11 +207,12 @@ const Carousel = () => {
         <Box
           sx={{
             width: "100%",
-            height: "94vh", // Full viewport height
-            display: "flex", // Added to center the Swiper
-            justifyContent: "center", // Center horizontally
-            alignItems: "center", // Center vertically
-            overflow: "hidden", // Smooth transition
+            height: "94vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
+            borderRadius: "20px",
           }}
         >
           <Swiper
@@ -186,52 +220,33 @@ const Carousel = () => {
             spaceBetween={2}
             loop={true}
             pagination={{
-              clickable: true,
+              clickable: true, // Enables clickable pagination
             }}
             autoplay={{
-              delay: 4000, // 2 seconds delay between slides
+              delay: 4000, // 4 seconds delay between slides
               disableOnInteraction: false, // Keeps autoplay active after interaction
             }}
             className="mySwiper"
-            modules={[Autoplay]}
+            modules={[Autoplay, Pagination]} // Make sure Pagination is imported and used here
             style={{ width: "100%", height: "100%" }}
           >
-            <SwiperSlide>
-              <img
-                src={hero2}
-                alt="Slide Image"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover", // Ensure the image covers the entire slide
-                }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={hero}
-                alt="Slide Image"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover", // Ensure the image covers the entire slide
-                }}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={hero1}
-                alt="Slide Image"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover", // Ensure the image covers the entire slide
-                }}
-              />
-            </SwiperSlide>
+            {home.map((res) =>
+              res.fields.images.map((image) => (
+                <SwiperSlide key={image.sys.id}>
+                  <img
+                    alt={image.fields.title}
+                    src={`https:${image.fields.file.url}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </SwiperSlide>
+              ))
+            )}
           </Swiper>
         </Box>
-
         <Box
           sx={{
             display: "flex",
@@ -239,12 +254,12 @@ const Carousel = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: 2,
-            borderRadius: 1,
-            backgroundColor: "rgba(8, 8, 8, 0.2)", // Increased opacity for better visibility
+            borderRadius: "20px",
+            background: "linear-gradient(to bottom, rgba(8, 8, 8, 0.3) 0%, rgba(8, 8, 8, 0.3) 60%, rgba(8, 8, 8, 0) 100%)",
             textAlign: "center",
-            width: "100%", // Full width of the carousel
-            height: { lg: "100%", xs: "100%" }, // Full height of the carousel
-            position: "absolute", // Positioning for overlay effect
+            width: "100%",
+            height: { lg: "90%", xs: "100%" },
+            position: "absolute",
             zIndex: 1,
           }}
           position="absolute"
@@ -261,20 +276,31 @@ const Carousel = () => {
               }}
               color="initial"
             >
-              POPE Memorial
+              POPE MEMORIAL
             </Typography>
             <Typography
               id="pope"
               sx={{
                 color: "white",
-                fontSize: { lg: "25px", md: "20px", sm: "15px", xs: "13px" },
+                fontSize: { lg: "35px", md: "20px", sm: "15px", xs: "13px" },
               }}
               color="initial"
             >
               HIGHER SECONDARY SCHOOL
             </Typography>
+            <Typography
+              id="pope"
+              sx={{
+                color: "white",
+                fontSize: { lg: "35px", md: "20px", sm: "15px", xs: "13px" },
+              }}
+              color="initial"
+            >
+              SAWYERPURAM
+            </Typography>
           </Box>
         </Box>
+
       </Box>
     </Box>
   );
@@ -283,9 +309,17 @@ const Carousel = () => {
 function Gal() {
   return (
     <>
-      <Box mt={10}>
+      <Box mt={10} data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
         <Swiper
-          slidesPerView={3}
+          breakpoints={{
+            0: {
+              slidesPerView: 2, // 2 slides on mobile view
+            },
+            768: {
+              slidesPerView: 3, // 3 slides on desktop (above 768px)
+            },
+          }}
           spaceBetween={5}
           loop={true}
           pagination={{
@@ -303,7 +337,7 @@ function Gal() {
           <SwiperSlide>
             <Box
               sx={{
-                height: { lg: "320px", md: "280px", sm: "200px", xs: "100px" },
+                height: { lg: "320px", md: "280px", sm: "200px", xs: "160px" },
                 objectFit: "cover",
               }}
             >
@@ -317,7 +351,7 @@ function Gal() {
           <SwiperSlide>
             <Box
               sx={{
-                height: { lg: "320px", md: "280px", sm: "200px", xs: "100px" },
+                height: { lg: "320px", md: "280px", sm: "200px", xs: "160px" },
                 objectFit: "cover",
               }}
             >
@@ -331,7 +365,7 @@ function Gal() {
           <SwiperSlide>
             <Box
               sx={{
-                height: { lg: "320px", md: "280px", sm: "200px", xs: "100px" },
+                height: { lg: "320px", md: "280px", sm: "200px", xs: "160px" },
                 objectFit: "cover",
               }}
             >
@@ -346,7 +380,7 @@ function Gal() {
           <SwiperSlide>
             <Box
               sx={{
-                height: { lg: "320px", md: "280px", sm: "200px", xs: "100px" },
+                height: { lg: "320px", md: "280px", sm: "200px", xs: "160px" },
                 objectFit: "cover",
               }}
             >
@@ -361,7 +395,7 @@ function Gal() {
           <SwiperSlide>
             <Box
               sx={{
-                height: { lg: "320px", md: "280px", sm: "200px", xs: "100px" },
+                height: { lg: "320px", md: "280px", sm: "200px", xs: "160px" },
                 objectFit: "cover",
               }}
             >

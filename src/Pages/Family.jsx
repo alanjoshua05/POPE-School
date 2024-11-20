@@ -4,6 +4,9 @@ import Typography from "@mui/material/Typography";
 import { Box, Grid } from "@mui/material";
 import "./Style/home.css";
 import hero2 from "../Pages/Images/hero2.jpg"
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default function Family() {
   return (
     <div>
@@ -28,7 +31,7 @@ export default function Family() {
       <Box mt={0} p={5}>
         <Grid container spacing={2}>
           <Grid item lg={4} xs={12}>
-            <Box p={2}>
+            <Box p={2} data-aos="fade-right">
               <Typography
                 className="text-center"
                 mb={2}
@@ -41,7 +44,7 @@ export default function Family() {
             </Box>
           </Grid>
           <Grid item lg={4} xs={12}>
-            <Box p={2}>
+            <Box p={2} data-aos="fade" data-aos-delay="300">
               <Typography
                 className="text-center"
                 mb={2}
@@ -54,14 +57,14 @@ export default function Family() {
             </Box>
           </Grid>
           <Grid item lg={4} xs={12}>
-            <Box p={2}>
+            <Box p={2} data-aos="fade-left" data-aos-delay="600">
               <Typography
                 className="text-center"
                 mb={2}
                 variant="h4"
                 color="initial"
               >
-                Secondary Grade Assistants
+                Sec.Grade Assistants
               </Typography>
               <Sec_Staff />
             </Box>
@@ -71,7 +74,7 @@ export default function Family() {
       <Box mt={0} p={5}>
         <Grid container spacing={2}>
           <Grid item lg={6} xs={12}>
-            <Box p={2}>
+            <Box p={2} data-aos="fade-right">
               <Typography
                 className="text-center"
                 mb={2}
@@ -84,7 +87,7 @@ export default function Family() {
             </Box>
           </Grid>
           <Grid item lg={6} xs={12}>
-            <Box p={2}>
+            <Box p={2} data-aos="fade-left" data-aos-delay="300">
               <Typography
                 className="text-center"
                 mb={2}
@@ -106,7 +109,7 @@ export default function Family() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -119,10 +122,11 @@ function Image() {
             src={hero2}// Corrected image reference
             sx={{
               width: "100%",
-              height: "92vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -133,7 +137,7 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
+              borderRadius: "20px",
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel

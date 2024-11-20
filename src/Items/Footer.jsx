@@ -24,7 +24,7 @@ function Foot() {
         <div className="mx-auto w-full p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 p-3 flex gap-7 md:mb-0">
-              <img src={logo} style={{ width: "90px", height:"90px" }} alt="FlowBite Logo" />
+              <img src={logo} style={{ width: "100px", height:"100px" }} alt="FlowBite Logo" />
               <div style={{ alignItems: "center" }} className="flex">
                 <ul>
                   <li className="flex gap-2">
@@ -42,7 +42,7 @@ function Foot() {
                       04630-273329
                     </p>
                   </li>
-                  <li className="mt-2 flex gap-2">
+                  {/* <li className="mt-2 flex gap-2">
                     <span className="font-bold">
                       <PlaceIcon />
                     </span>
@@ -50,7 +50,7 @@ function Foot() {
                       3-B, Periyanayagipuram, <br /> Opp. to Collectorate,{" "}
                       <br /> Thoothukudi, Tamil Nadu - 628 101 INDIA
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -76,6 +76,9 @@ function Foot() {
                     </li>
                     <li>
                       <Link to="/achievement">Achievements</Link>
+                    </li>
+                    <li>
+                      <Link to="/rules">Rules & Regulations</Link>
                     </li>
                   </ul>
                 </div>
@@ -107,7 +110,7 @@ function Foot() {
             
               <div className="flex justify-center mt-4 lg:p-12 sm:p-2 sm:justify-center sm:mt-0">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/popesschoolsawyerpuram/" target="blank"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
                 >
                   <FacebookIcon/>
@@ -119,7 +122,7 @@ function Foot() {
                   <InstagramIcon/>
                 </a>
                 <a
-                  href="#"
+                  href="https://youtube.com/@popemhss?si=LSPrh3WSJ-aro8T0" target="blank"
                   className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
                 >
                   <YouTubeIcon/>

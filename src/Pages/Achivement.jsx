@@ -3,6 +3,9 @@ import { Box, Typography, Pagination, useMediaQuery } from "@mui/material";
 import "../Pages/Style/home.css";
 import { createClient } from "contentful";
 import hero2 from "../Pages/Images/hero2.jpg"
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default function Achivement() {
   return (
     <div>
@@ -15,7 +18,7 @@ export default function Achivement() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -32,6 +35,7 @@ function Image() {
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -42,7 +46,7 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
+              borderRadius: "20px",
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel
@@ -152,7 +156,7 @@ function Achivement_Student() {
 
               if (fields && image && title && description) {
                 return (
-                  <div key={index}>
+                  <div key={index} data-aos="fade-up">
                     <div
                       className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
                       style={{ height: "100%" }} // Ensure container takes full height

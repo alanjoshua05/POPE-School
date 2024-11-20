@@ -24,7 +24,7 @@ export default function Infrastructure() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -37,10 +37,11 @@ function Image() {
             src={hero2}
             sx={{
               width: "100%",
-              height: "92vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -51,7 +52,7 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
+              borderRadius: "20px",
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel

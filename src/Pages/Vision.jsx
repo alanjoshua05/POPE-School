@@ -14,7 +14,7 @@ export default function Vision() {
 function Image() {
   return (
     <Box>
-      <Box position="relative" width="100%" margin="auto">
+      <Box p={2} position="relative" width="100%" margin="auto">
         <Box
           display="flex"
           justifyContent="center"
@@ -27,10 +27,11 @@ function Image() {
             src={hero2}
             sx={{
               width: "100%",
-              height: "100vh", // Responsive height
+              height: "94vh", // Responsive height
               objectFit: "cover", // Ensures the image covers the entire box
               objectPosition: "center", // Centers the image
               transition: "opacity 0.5s ease-in-out", // Smooth transition
+              borderRadius:"20px"
             }}
           />
 
@@ -41,11 +42,11 @@ function Image() {
               justifyContent: "center",
               alignItems: "center",
               padding: 2,
-              borderRadius: 1,
               backgroundColor: "rgba(8, 8, 8, 0.3)", // Increased opacity for better visibility
               textAlign: "center",
               width: "100%", // Full width of the carousel
               height: { lg: "100%", xs: "100%" }, // Full height of the carousel
+              borderRadius:"20px"
             }}
             position="absolute"
             top={0}
@@ -89,12 +90,13 @@ function AV() {
           >
             Vision & Mission
           </Typography>
+          <hr className="my-4"/>
         </Box>
-        <div className="mt-7">
+        <div className="mt-0">
           <Typography variant="h5" id="pope" color="initial">
             Our Aim
           </Typography>
-          <ul className="mt-4" style={{ textIndent: "100px" }}>
+          <ul className="mt-4" style={{ textIndent: "100px",textAlign:"justify" }}>
             <li>
               - The school aims to foster well-rounded development, emphasizing
               not just academic excellence but also emotional, physical, and
@@ -125,7 +127,7 @@ function AV() {
           <Typography variant="h5" id="pope" color="initial">
             Our Philosophy
           </Typography>
-          <ul className="mt-4" style={{ textIndent: "100px" }}>
+          <ul className="mt-4" style={{ textIndent: "100px", textAlign:"justify" }}>
             <li>
               - The school’s philosophy revolves around redefining traditional
               education by integrating progressive methods that emphasize

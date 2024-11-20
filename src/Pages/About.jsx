@@ -21,7 +21,7 @@ export default function About() {
 
 function Image() {
   return (
-    <Box position="relative" width="100%" margin="auto">
+    <Box p={2} position="relative" width="100%" margin="auto">
       <Box
         display="flex"
         justifyContent="center"
@@ -37,6 +37,7 @@ function Image() {
             justifyContent: "center", // Center horizontally
             alignItems: "center", // Center vertically
             overflow: "hidden", // Smooth transition
+            borderRadius:"20px"
           }}
         >
           <Swiper
@@ -104,14 +105,14 @@ function History() {
           p={{ lg: 10, md: 8, sm: 5, xs: 1 }}
         >
           <Typography
-            className="text-center"
+            className="text-center uppercase"
             id="pope"
             sx={{
               color: "black",
-              fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "35px" },
+              fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "30px" },
             }}
           >
-            POPE Higher Scecondary School
+            POPE Memorial <br /> Higher Scecondary School
           </Typography>
           <Typography
             mt={1}
